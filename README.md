@@ -8,3 +8,9 @@ These imports that reference a lerna package and are not explicitly specified sh
 
 ## Why is this a webpack issue
 If you build the `my-package` package with `tsc` only, no webpack, resulting declarations are correctly not changed to relative imports.
+
+## Steps to check the issue
+* run `lerna run build`
+* check the resulting declaration file in `my-package` (`my-package/lib/src/index.d.ts`)  and notice the relative import to `my-constants`
+* run `tsc -p ./` in `my-package` specifically
+* check the resulting declaration file and notice the non relative import (expected behavior)
