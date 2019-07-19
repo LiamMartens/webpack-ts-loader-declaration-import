@@ -1,0 +1,20 @@
+{
+  "name": "my-package",
+  "version": "1.0.0",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "TS_NODE_PROJECT=tsconfig.webpack.json NODE_ENV=production webpack --mode=production",
+    "watch": "TS_NODE_PROJECT=tsconfig.webpack.json NODE_ENV=development webpack --mode=development --watch"
+  },
+  "devDependencies": {
+    "ts-loader": "^6.0.4",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
+  },
+  "dependencies": {
+    "my-constants": "^1.0.0"
+  }
+}
